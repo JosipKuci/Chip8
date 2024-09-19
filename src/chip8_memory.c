@@ -30,7 +30,7 @@ unsigned char chip8_memory_get(struct chip8_memory* memory, int index)
     }
     
 }
-
+//Reads memory as 16-bit instead of 8-bit
 unsigned short chip8_memory_get_short(struct chip8_memory* memory, int index)
 {
     unsigned char first_byte = chip8_memory_get(memory, index);

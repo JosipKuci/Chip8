@@ -35,7 +35,7 @@ bool chip8_screen_draw_sprite(struct chip8_screen* screen, int x, int y, const c
             {
                 sprite_changed=true;
             }
-            screen->pixels[(ly+y)% CHIP8_HEIGHT][(lx+x)%CHIP8_WIDTH] ^= true; //TODO nezz sta ta strelica znaci
+            screen->pixels[(ly+y)% CHIP8_HEIGHT][(lx+x)%CHIP8_WIDTH] ^= true;
         }
     }
     return sprite_changed;

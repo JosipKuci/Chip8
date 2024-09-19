@@ -28,5 +28,5 @@ unsigned short chip8_stack_pop(struct chip8* chip8)
     {
             return chip8->stack.stack[chip8->registers.SP];
     }
-    return NULL; //TODO: postoji bolji nacin sigurno
+    return NULL;
 }

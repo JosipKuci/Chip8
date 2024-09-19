@@ -3,7 +3,7 @@
 #define CHIP8_MEMORY_H
 struct chip8_memory
 {
-    unsigned char memory[CHIP8_MEMORY_SIZE]; //TODO: Los naziv, kasnije promjeniti
+    unsigned char memory[CHIP8_MEMORY_SIZE];
 };
 
 void chip8_memory_set(struct chip8_memory* memory,int index, unsigned char value);
