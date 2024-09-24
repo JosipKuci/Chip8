@@ -13,3 +13,11 @@ Then to start the emulator, change into the `bin` directory and start the main.e
 `main.exe .\INVADERS`
 
 This emulator works with every Chip-8 game, and there is a Space Invaders ROM included with the repository for testing
+
+### Controls and mapping
+<table border="1" cellpadding="3" cellspacing="0" align="center">
+			<tbody><tr><td><tt>1</tt></td><td><tt>2</tt></td><td><tt>3</tt></td><td><tt>C</tt></td></tr>
+			<tr><td><tt>4</tt></td><td><tt>5</tt></td><td><tt>6</tt></td><td><tt>D</tt></td></tr>
+			<tr><td><tt>7</tt></td><td><tt>8</tt></td><td><tt>9</tt></td><td><tt>E</tt></td></tr>
+			<tr><td><tt>A</tt></td><td><tt>0</tt></td><td><tt>B</tt></td><td><tt>F</tt></td></tr>
+		</tbody></table>
