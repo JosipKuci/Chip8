@@ -7,6 +7,7 @@ It was compiled and tested using the 32-bit mingw32 compiler on a windows 10 mac
 To compile the code, go to the Chip8 directory and run the command:
 
 `mingw32-make`
+
 Then to start the emulator, change into the `bin` directory and start the main.exe file by also specifying the ROM you want to play, for example:
 
 `main.exe .\INVADERS`
