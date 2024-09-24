@@ -8,16 +8,31 @@ To compile the code, go to the Chip8 directory and run the command:
 
 `mingw32-make`
 
-Then to start the emulator, change into the `bin` directory and start the main.exe file by also specifying the ROM you want to play, for example:
+Then to start the emulator, change into the  directory and start the main.exe file by also specifying the ROM you want to play, for example:
 
 `main.exe .\INVADERS`
 
 This emulator works with every Chip-8 game, and there is a Space Invaders ROM included with the repository for testing
 
 ### Controls and mapping
+On the original Chip-8 the keys were mapped as follows:
+
 <table border="1" cellpadding="3" cellspacing="0" align="center">
 			<tbody><tr><td><tt>1</tt></td><td><tt>2</tt></td><td><tt>3</tt></td><td><tt>C</tt></td></tr>
 			<tr><td><tt>4</tt></td><td><tt>5</tt></td><td><tt>6</tt></td><td><tt>D</tt></td></tr>
 			<tr><td><tt>7</tt></td><td><tt>8</tt></td><td><tt>9</tt></td><td><tt>E</tt></td></tr>
 			<tr><td><tt>A</tt></td><td><tt>0</tt></td><td><tt>B</tt></td><td><tt>F</tt></td></tr>
 		</tbody></table>
+  
+In the emulator, the keys are mapped as:
+
+<table border="1" cellpadding="3" cellspacing="0" align="center">
+			<tbody><tr><td><tt>1</tt></td><td><tt>2</tt></td><td><tt>3</tt></td><td><tt>4</tt></td></tr>
+			<tr><td><tt>Q</tt></td><td><tt>W</tt></td><td><tt>E</tt></td><td><tt>R</tt></td></tr>
+			<tr><td><tt>A</tt></td><td><tt>S</tt></td><td><tt>D</tt></td><td><tt>F</tt></td></tr>
+			<tr><td><tt>Y</tt></td><td><tt>X</tt></td><td><tt>C</tt></td><td><tt>V</tt></td></tr>
+		</tbody></table>
+  
+The keys can be remapped by changing the values of the `keyboard_map` array located at the start of the `src\main.c` file
+
+
