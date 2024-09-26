@@ -40,3 +40,7 @@ As the Chip-8 does not define any clock cycles, the emulation speed is defined b
 Use the key `O` to increase the delay and the key `P` to decrease it.
 By default, the delay is set to 0ms. The current delay is shown in the coomand prompt.
 
+### Screenshots
+
+![ScreenShot](https://github.com/JosipKuci/Chip8-emulator/blob/main/example1.png?raw=true)
+
