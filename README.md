@@ -45,7 +45,7 @@ By default, the delay is set to 0ms. The current delay is shown in the coomand p
 <div align="center">
     <img src="https://github.com/JosipKuci/Chip8-emulator/blob/main/example1.png?raw=true" width="400px"</img> 
 </div>
-
+<br><br>
 <div align="center">
     <img src="https://github.com/JosipKuci/Chip8-emulator/blob/main/example2.png?raw=true" width="400px"</img> 
 </div>
