@@ -38,7 +38,7 @@ The keys can be remapped by changing the values of the `keyboard_map` array loca
 ### Emulation speed control
 As the Chip-8 does not define any clock cycles, the emulation speed is defined by the user/hardware.
 Use the key `O` to increase the delay and the key `P` to decrease it.
-By default, the delay is set to 0ms. The current delay is shown in the coomand prompt.
+By default, the delay is set to 0ms. The current delay is shown in the command prompt.
 
 ### Screenshots
 
