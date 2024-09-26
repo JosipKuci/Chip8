@@ -11,6 +11,8 @@ const char keyboard_map[CHIP8_NUMBER_OF_KEYS] =
         SDLK_q, SDLK_w, SDLK_e, SDLK_r,
         SDLK_a, SDLK_s, SDLK_d, SDLK_f,
         SDLK_y, SDLK_x, SDLK_c, SDLK_v};
+
+int chip8_emulator_delay=0;
 int main(int argc, char **argv)
 {
     if(argc < 2)
@@ -73,6 +75,18 @@ int main(int argc, char **argv)
                 {
                     chip8_keyboard_hold_key_down(&chip8.keyboard, vkey);
                 }
+                else if(key==SDLK_o)
+                {
+                    chip8_emulator_delay++;
+                    printf("emulator delay: %dms \n", chip8_emulator_delay);
+                }
+                else if(key==SDLK_p)
+                {
+                    chip8_emulator_delay--;
+                    if(chip8_emulator_delay<0)
+                        chip8_emulator_delay=0;
+                    printf("emulator delay: %dms \n", chip8_emulator_delay);
+                }
             }
             break;
             case SDL_KEYUP:
@@ -83,6 +97,8 @@ int main(int argc, char **argv)
                 {
                     chip8_keyboard_key_up(&chip8.keyboard, vkey);
                 }
+                if(chip8_emulator_delay<0)
+                        chip8_emulator_delay=0;
             }
             break;
             }
@@ -109,7 +125,7 @@ int main(int argc, char **argv)
         SDL_RenderPresent(renderer);
         if (chip8.registers.delay_timer > 0)
         {
-            Sleep(3);
+            SDL_Delay(3);
             chip8.registers.delay_timer--;
         }
 
@@ -118,6 +134,11 @@ int main(int argc, char **argv)
             Beep(15000,3*chip8.registers.sound_timer);
             chip8.registers.sound_timer=0;
         }
+        if(chip8_emulator_delay<0)
+        {
+            chip8_emulator_delay=0;
+        }
+        SDL_Delay(chip8_emulator_delay);
         unsigned short opcode = chip8_memory_get_short(&chip8.memory, chip8.registers.PC);
         chip8.registers.PC+=2;
         chip8_exec(&chip8, opcode);
